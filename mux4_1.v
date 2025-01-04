@@ -1,16 +1,11 @@
 module mux4_1(data_in,
 	      sel_in,
 	      y_out);
-
-				 
-
-
-   //Step1 : Define the port directions with proper size & datatypes 
+	
    input [3:0]data_in;
    input [1:0]sel_in;
    output reg y_out;
-
-   //Step2 : Write the MUX behaviour as a parallel logic using "case" 
+	
    always@(data_in,sel_in)
       begin
 	 case(sel_in)
@@ -21,6 +16,5 @@ module mux4_1(data_in,
 	    default: y_out = 0;
          endcase
       end 
-					
-
+	
 endmodule
